@@ -4,7 +4,11 @@ digits_len = len(digits)
 
 first_index = 0
 last_index = len(digits) - 1
-guess_number = 5
+guess_number = int(
+    input(
+        f"Введите число для поиска в списке от {digits[first_index]} до {digits[last_index]}: "
+    )
+)
 
 guess_number_index = 0
 tries = 1
@@ -28,4 +32,4 @@ else:
     print("Заданное число не находится в списке")
 
 print(f"Заданное число {guess_number} находится на позиции {guess_number_index}")
-print(f'Количество итераций {tries}')
+print(f"Количество итераций: {tries}")
